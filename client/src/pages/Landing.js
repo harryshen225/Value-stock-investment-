@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import LoginForm from '../components/LoginForm'
+import LoginForm from '../custom-components/LoginForm'
 import { BrowserRouter, Route } from 'react-router-dom'
-import AuthNavbar from '../components/AuthNavbar'
-import SignupForm from '../components/SignupForm'
+import AuthNavbar from '../custom-components/AuthNavbar'
+import SignupForm from '../custom-components/SignupForm'
 import BgImg from '../img/nightsky_wallpaper.jpg'
 import { UserContext } from '../contexts/UserContext'
+
 
 export default function Landing() {
     const style = {
@@ -24,8 +25,9 @@ export default function Landing() {
 
     return (
         <div style={style.authLanding}>
-            <AuthNavbar />
+
             <BrowserRouter>
+                <AuthNavbar />
                 <Route exact path="/" component={LoginForm} />
                 <Route exact path="/login" component={LoginForm} />
                 <Route exact path="/signup" component={SignupForm} />

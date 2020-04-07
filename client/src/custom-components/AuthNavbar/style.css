@@ -1,0 +1,70 @@
+#auth-nav-brand {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+/* #auth-nav-brand i{
+    
+} */
+
+
+.nav-text.nav-text-custom {
+    color:rgb(195, 203, 212);
+    font: 20px;
+    /* color: #03e9f4; */
+    /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate; */
+    text-shadow: 0 0 50px #03e9f4;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgb(99, 133, 226), 0 0 20px rgb(94, 107, 228), 0 0 30px rgb(70, 86, 228), 0 0 40px rgb(53, 70, 223), 0 0 50px rgb(34, 52, 218), 0 0 60px rgb(19, 39, 212),0 0 70px rgb(2, 26, 243);
+    }
+    to {
+        /* text-shadow: 0 0 20px rgb(99, 133, 226), 0 0 30px rgb(94, 107, 228), 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+        text-shadow: 0 0 20px rgb(99, 133, 226), 0 0 30px rgb(94, 107, 228), 0 0 40px rgb(94, 107, 228), 0 0 50px rgb(94, 107, 228), 0 0 60px rgb(94, 107, 228), 0 0 70px rgb(94, 107, 228), 0 0 80px rgb(94, 107, 228);
+    }
+}
+
+.nav-item.login-custom{
+    margin: 30px 30px; 
+    
+}
+
+.nav-transparent-custom{ 
+    background-color: transparent;
+    height: 30%
+}
+
+.navbar-nav.navbar-nav-custom a{
+    color: fff;
+    font-size: 20px;
+    transition: .3s;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.navbar-nav.navbar-nav-custom span{
+    
+    font-size: 18px;
+    font-weight: bold;
+    /* border: 1px solid #03e9f4; */
+}
+.navbar-nav.navbar-nav-custom a:hover{
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.navbar-nav.navbar-nav-custom span:hover{
+    color: #03e9f4;
+    font-size: 20px;
+    transition: .3s;
+    transform: scale(1.1);
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 0 50px #03e9f4;
+}
+

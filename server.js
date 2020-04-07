@@ -6,6 +6,13 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const fs = require('fs');
+const ssl_options = {
+    key: fs.readFileSync('./config/server.key'),
+    cert: fs.readFileSync('./config/server.cert')
+}
+
+const https = require('https');
 
 
 
@@ -19,12 +26,16 @@ app.use(cookieSession({
     keys: [keys.session.sessionKey]
 }))
 
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGODB_URI || keys.mongodb.dbURI)
+mongoose.connect(process.env.MONGODB_URI || keys.mongodb.dbURI);
+
 app.use('/auth',authRouter);
 
-app.listen(PORT, ()=>{
+https.createServer(ssl_options,app).listen(PORT, ()=>{
     console.log('listening to port ', PORT)
 })
+
